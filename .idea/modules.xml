@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/github.iml" filepath="$PROJECT_DIR$/github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo.iml" filepath="$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo_main.iml" group="vpc_for_yaoguangluo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/vpc_for_yaoguangluo_test.iml" group="vpc_for_yaoguangluo" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.lyg.vpc.controller.business.factory.workshop.task.HotelDao">
+
+
+    <resultMap id="UserMap" type="org.lyg.vpc.view.User">
+        <id column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_age" jdbcType="INTEGER" property="userAge"/>
+    </resultMap>
+    <select id="selectUserListByAge" parameterType="map" resultMap="UserMap">
+        SELECT *
+        FROM user AS u
+        WHERE u.user_age = #{userAge}
+    </select>
+
+
+    <!--
+    <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="roomId" jdbcType="INTEGER" property="roomId" />
+        <result column="hotelId" jdbcType="INTEGER" property="hotelId" />
+    </resultMap>
+    <resultMap id="Hotel_roomResultMap" type="com.ustrip.entity.Hotel_room">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="roomId" jdbcType="INTEGER" property="roomId" />
+        <result column="hotelId" jdbcType="INTEGER" property="hotelId" />
+        <result column="roomPid" jdbcType="VARCHAR" property="roomPid" />
+    </resultMap>
+    <resultMap id="RoomResultMap" type="com.ustrip.entity.Room">
+        <id column="roomId" jdbcType="INTEGER" property="id" />
+        <result column="roomPid" jdbcType="VARCHAR" property="roomPid" />
+    </resultMap>
+    <select id="selectPartnerByEmail" parameterType="map" resultMap="PartnerResultMap">
+        SELECT *
+        FROM partner AS p
+        WHERE p.email = #{email}
+    </select>
+    <select id="selectPorderByPartnerIdAndOrderReference" parameterType="map" resultMap="PorderResultMap">
+        SELECT *
+        FROM porder AS p
+        WHERE p.partnerId = #{partnerId} and p.orderReference=#{orderReference}
+    </select>
+
+    <update id="updatePorderStatusByOrderRefIdPartnerId" parameterType="map">
+            update porder set status = #{status}   where partnerId = #{partnerId} AND orderReference=#{orderReference}
+    </update>
+    -->
+
+</mapper>
