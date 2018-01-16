@@ -207,7 +207,7 @@ public class POSTREST
 	}
 	
 	
-	
+	///*
 	public String getRaw(HttpRequest request) throws IOException
 	{
 		 String requestBody = "";
@@ -254,6 +254,6 @@ public class POSTREST
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+//*/
 
 }

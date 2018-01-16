@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
-import org.jboss.resteasy.spi.HttpRequest;
+//import org.jboss.resteasy.spi.HttpRequest;
 import org.json.JSONObject;
 import org.json.XML;
 
