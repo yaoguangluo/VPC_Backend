@@ -1,7 +1,8 @@
 package org.lyg.vpc.controller.business.factory.workshop.task;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.lyg.vpc.view.User;
+
+import java.util.List;
 
 public interface HotelDao 
 {
