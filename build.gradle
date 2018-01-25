@@ -30,6 +30,7 @@ dependencies {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version: '1.5.2.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.2.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-jdbc:1.2.2.RELEASE'
     compile 'org.mybatis:mybatis-spring:1.2.2'
     compile 'org.mybatis:mybatis:3.2.8'
@@ -42,5 +43,5 @@ dependencies {
     compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.1.4.Final'
     compile group: 'org.json', name: 'json', version: '20160810'
     compile group: 'org.webjars', name: 'angularjs', version: '1.2.16-2'
-    compile "org.projectlombok:lombok:1.12.6"
+    compile "org.projectlombok:lombok:1.16.2"
 }
