@@ -2,7 +2,6 @@ package org.lyg.vpc.view;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.lyg.vpc.process.eda.event.UserCreatedEvent;
 
 
 /**

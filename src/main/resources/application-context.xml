@@ -34,7 +34,7 @@
 
     <bean id="selectDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="mapperInterface"
-                  value="org.lyg.vpc.controller.business.factory.workshop.task.SelectDAO"></property>
+                  value="org.lyg.vpc.controller.factory.workshop.task.SelectDAO"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
 
