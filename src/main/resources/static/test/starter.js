@@ -1,23 +1,11 @@
 /*
-angular.module("push_value", []).controller("push_value", function ($scope, $http, $location) {
-    $scope.click = function () {
-        //  $http.post('http://localhost:8080/bb?bb=1', angular.toJson($scope.loginInfo)).
-        $http.get('http://localhost:8080/bb?bb=1').success(function (status) {
-            console.log(status);
-            $scope.info = status;
-        }).error(function () {
-            $scope.error = 'auth failed';
-        });
-    }
-});
-
-*/
 function greet(name) {
+    alert("hello");
     var output = '';
     var am = angular.module("push_value", []);
     am.controller('push_value', ['$scope', '$http',
         function ($scope, $http) {
-            $http.get('http://localhost:8080/bb?bb=1').success(function (status) {
+            $http.get('http://localhost:8080/aa?aa=1').success(function (status) {
                 console.log(status);
                 $scope.info = status;
                 output = $scope.info;
@@ -34,3 +22,15 @@ function greet(name) {
         }]);
     return 'Hello, ' + output + '!';
 }
+*/
+var am = angular.module("push_value", []);
+am.controller('push_value', ['$scope', '$http',
+    function ($scope, $http) {
+        $scope.click = function () {
+            $http.get('http://localhost:8080/aa?aa=1').then(function successCallback(response) {
+                $scope.info=response;
+            }, function errorCallback(response) {
+                $scope.info=response;
+            });
+        }
+    }]);
