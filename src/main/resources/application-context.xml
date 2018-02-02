@@ -12,12 +12,12 @@
          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
          http://www.springframework.org/schema/aop
          http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
-
     <context:annotation-config/>
     <context:property-placeholder/>
     <context:component-scan base-package="org.lyg.common"/>
     <context:component-scan base-package="org.lyg.utils"/>
     <context:component-scan base-package="org.lyg.vpc.*"/>
+    <!--aop:aspectj-autoproxy proxy-target-class="true"/-->
 
     <import resource="classpath*:dataSource.xml"/>
     <bean id="transactionManager"
@@ -44,8 +44,7 @@
                        rollback-for="java.lang.RuntimeException"/>
         </tx:attributes>
     </tx:advice>
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
-
+    <!--bean id="testAspect" class="org.lyg.common.TestAspect"/-->
     <bean id="dataSourceAspect" class="org.lyg.common.DataSourceAspect"/>
     <aop:config>
         <aop:advisor order="3" pointcut-ref="delegate" advice-ref="userTxAdvice"/>
@@ -60,10 +59,11 @@
     <bean id="connectionFactory"
           class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
         <property name="usePool" value="true"></property>
-        <property name="hostName" value="104.180.91.52"/>
+        <property name="hostName" value="192.168.1.107"/>
         <property name="port" value="6379"/>
         <property name="password" value="fengyue1985"/>
         <property name="timeout" value="100000"/>
+        <property name="database" value="6"/>
         <constructor-arg index="0" ref="jedisPoolConfig"/>
     </bean>
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">

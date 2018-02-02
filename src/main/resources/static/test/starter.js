@@ -26,11 +26,13 @@ function greet(name) {
 var am = angular.module("push_value", []);
 am.controller('push_value', ['$scope', '$http',
     function ($scope, $http) {
+        $scope.isrun = 0;
         $scope.click = function () {
             $http.get('http://localhost:8080/aa?aa=1').then(function successCallback(response) {
-                $scope.info=response;
+                $scope.info = response.data;
             }, function errorCallback(response) {
-                $scope.info=response;
+                $scope.info = response;
             });
+            $scope.isrun = 1;
         }
     }]);
