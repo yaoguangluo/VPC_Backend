@@ -1,4 +1,4 @@
-package org.lyg.utils;
+package org.lyg.common.utils;
 
 
 import redis.clients.jedis.Jedis;

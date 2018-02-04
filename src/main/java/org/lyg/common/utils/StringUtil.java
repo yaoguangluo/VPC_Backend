@@ -7,7 +7,7 @@
  * $Author: james $
  * $Id: DbHelper.java 2015-04-29 
 */
-package org.lyg.common;
+package org.lyg.common.utils;
 
 
 import java.io.UnsupportedEncodingException;

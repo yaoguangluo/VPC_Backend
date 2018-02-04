@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.lyg.vpc.controller.factory.workshop.task.LoginDao">
+    <resultMap id="UsrMap" type="org.lyg.vpc.view.Usr">
+        <id column="u_id" jdbcType="INTEGER" property="uId"/>
+        <result column="u_name" jdbcType="INTEGER" property="uName"/>
+        <result column="u_age" jdbcType="VARCHAR" property="uAge"/>
+        <result column="u_sex" jdbcType="VARCHAR" property="uSex"/>
+        <result column="u_phone" jdbcType="VARCHAR" property="uPhone"/>
+        <result column="u_address" jdbcType="VARCHAR" property="uAddress"/>
+        <result column="u_weChat" jdbcType="VARCHAR" property="uWeChat"/>
+        <result column="u_class" jdbcType="VARCHAR" property="uClass"/>
+        <result column="u_email" jdbcType="VARCHAR" property="uEmail"/>
+        <result column="u_qq" jdbcType="VARCHAR" property="uQq"/>
+    </resultMap>
+
+    <resultMap id="UsrTokenMap" type="org.lyg.vpc.view.UsrToken">
+        <id column="u_id" jdbcType="INTEGER" property="uId"/>
+        <result column="u_key" jdbcType="INTEGER" property="uKey"/>
+        <result column="u_password" jdbcType="VARCHAR" property="uPassword"/>
+        <result column="u_token" jdbcType="VARCHAR" property="uToken"/>
+        <result column="u_time" jdbcType="INTEGER" property="uTime"/>
+    </resultMap>
+
+    <resultMap id="UsrFullMap" type="org.lyg.vpc.view.UsrFull">
+        <id column="u_id" jdbcType="INTEGER" property="uId"/>
+        <result column="u_name" jdbcType="INTEGER" property="uName"/>
+        <result column="u_age" jdbcType="VARCHAR" property="uAge"/>
+        <result column="u_sex" jdbcType="VARCHAR" property="uSex"/>
+        <result column="u_phone" jdbcType="VARCHAR" property="uPhone"/>
+        <result column="u_address" jdbcType="VARCHAR" property="uAddress"/>
+        <result column="u_weChat" jdbcType="VARCHAR" property="uWeChat"/>
+        <result column="u_class" jdbcType="VARCHAR" property="uClass"/>
+        <result column="u_email" jdbcType="VARCHAR" property="uEmail"/>
+        <result column="u_qq" jdbcType="VARCHAR" property="uQq"/>
+        <result column="u_key" jdbcType="INTEGER" property="uKey"/>
+        <result column="u_password" jdbcType="VARCHAR" property="uPassword"/>
+        <result column="u_token" jdbcType="VARCHAR" property="uToken"/>
+        <result column="u_time" jdbcType="INTEGER" property="uTime"/>
+    </resultMap>
+
+    <select id="selectUsrById" parameterType="map" resultMap="UsrMap">
+        SELECT *
+        FROM usr AS u
+        WHERE u.u_id = #{uId}
+    </select>
+
+    <select id="selectUsrTokenById" parameterType="map" resultMap="UsrTokenMap">
+        SELECT *
+        FROM usr_token AS u
+        WHERE u.u_id = #{uId}
+    </select>
+
+    <select id="selectUsrFullById" parameterType="map" resultMap="UsrFullMap">
+        SELECT *
+        FROM usr AS u
+        INNER JOIN usr_token AS t ON u.u_id =t.u_id
+        WHERE u.u_id = #{uId}
+    </select>
+
+    <!--
+    <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="roomId" jdbcType="INTEGER" property="roomId" />
+        <result column="hotelId" jdbcType="INTEGER" property="hotelId" />
+    </resultMap>
+    <resultMap id="Hotel_roomResultMap" type="com.ustrip.entity.Hotel_room">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="roomId" jdbcType="INTEGER" property="roomId" />
+        <result column="hotelId" jdbcType="INTEGER" property="hotelId" />
+        <result column="roomPid" jdbcType="VARCHAR" property="roomPid" />
+    </resultMap>
+    <resultMap id="RoomResultMap" type="com.ustrip.entity.Room">
+        <id column="roomId" jdbcType="INTEGER" property="id" />
+        <result column="roomPid" jdbcType="VARCHAR" property="roomPid" />
+    </resultMap>
+    <select id="selectPartnerByEmail" parameterType="map" resultMap="PartnerResultMap">
+        SELECT *
+        FROM partner AS p
+        WHERE p.email = #{email}
+    </select>
+    <select id="selectPorderByPartnerIdAndOrderReference" parameterType="map" resultMap="PorderResultMap">
+        SELECT *
+        FROM porder AS p
+        WHERE p.partnerId = #{partnerId} and p.orderReference=#{orderReference}
+    </select>
+
+    <update id="updatePorderStatusByOrderRefIdPartnerId" parameterType="map">
+            update porder set status = #{status}   where partnerId = #{partnerId} AND orderReference=#{orderReference}
+    </update>
+    -->
+</mapper>

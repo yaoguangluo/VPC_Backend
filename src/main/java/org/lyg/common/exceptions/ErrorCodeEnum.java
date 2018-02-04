@@ -1,4 +1,4 @@
-package org.lyg.common;
+package org.lyg.common.exceptions;
 
 public enum ErrorCodeEnum {
 	ER1001("error."),

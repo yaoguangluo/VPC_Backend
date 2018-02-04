@@ -1,5 +1,5 @@
 
-package org.lyg.common;
+package org.lyg.common.utils;
 
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;

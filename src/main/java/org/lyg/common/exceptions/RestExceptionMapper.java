@@ -1,14 +1,17 @@
-package org.lyg.common;
+package org.lyg.common.exceptions;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.lyg.common.constants.MiniConstant;
 
 @Provider
+@Slf4j
 public class RestExceptionMapper implements ExceptionMapper<Exception> {
 
     private static Logger logger = LogManager.getLogger(RestExceptionMapper.class.getName());
@@ -19,7 +22,6 @@ public class RestExceptionMapper implements ExceptionMapper<Exception> {
         if (exception instanceof MiniException) {
             return Response.status(Status.OK).entity(exception).build();
         }
-
         MiniException error = new MiniException(MiniConstant.ERRORCODE_ER1001, ErrorCodeEnum.ER1001.getMsg());
         return Response.status(Status.OK).entity(error).build();
     }

@@ -1,13 +1,11 @@
 package org.lyg.vpc.process.companyImpl;
 
-//import org.apache.camel.builder.RouteBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.lyg.vpc.controller.company.RestControllerPort;
 import org.lyg.vpc.controller.company.department.HelloBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RestController;
-//import org.springframework.web.bind.annotation.RestController;
 
 import javax.ws.rs.QueryParam;
 import java.io.BufferedReader;
@@ -18,7 +16,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
 
 @RestController
 @Slf4j

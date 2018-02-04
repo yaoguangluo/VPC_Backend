@@ -15,7 +15,7 @@
     <context:annotation-config/>
     <context:property-placeholder/>
     <context:component-scan base-package="org.lyg.common"/>
-    <context:component-scan base-package="org.lyg.utils"/>
+    <context:component-scan base-package="org.lyg.common.utils"/>
     <context:component-scan base-package="org.lyg.vpc.*"/>
     <!--aop:aspectj-autoproxy proxy-target-class="true"/-->
 
@@ -44,8 +44,8 @@
                        rollback-for="java.lang.RuntimeException"/>
         </tx:attributes>
     </tx:advice>
-    <!--bean id="testAspect" class="org.lyg.common.TestAspect"/-->
-    <bean id="dataSourceAspect" class="org.lyg.common.DataSourceAspect"/>
+    <!--bean id="testAspect" class="org.lyg.common.aspects.TestAspect"/-->
+    <bean id="dataSourceAspect" class="org.lyg.common.aspects.DataSourceAspect"/>
     <aop:config>
         <aop:advisor order="3" pointcut-ref="delegate" advice-ref="userTxAdvice"/>
         <aop:aspect id="c" order="2" ref="dataSourceAspect">
