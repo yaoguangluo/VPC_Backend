@@ -38,7 +38,7 @@ public class LoginProjectImpl implements LoginProject {
         Map<String, Object> out = new HashMap<>();
         out.put("userToken", jsonToken);
         out.put("userEmail", uEmail);
-        transactionDelegate.transactionUpdateUsrTokenByUId(usr.getUId(), token.getUKey(), password, token.getUTime());
+        transactionDelegate.transactionUpdateUsrTokenByUId(usr.getUId(), token.getUKey(), password, token.getUTime()/1000);
         return out;
     }
 }
