@@ -13,5 +13,5 @@ public class Usr {
     private String uWeChat;
     private String uClass;
     private String uEmail;
-    private String uQQ;
+    private String uQq;
 }

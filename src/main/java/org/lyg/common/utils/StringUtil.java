@@ -37,7 +37,7 @@ public class StringUtil {
         md5.update((salt + "||" + pwd).getBytes("UTF-8"));
         StringBuffer buf = new StringBuffer();
         for (byte b : md5.digest()) {
-            buf.append(String.format("%02x", b & 0xA4));
+            buf.append(String.format("%02x", b & 0xBD));
         }
         String md5pwd = buf.toString();
         return md5pwd;

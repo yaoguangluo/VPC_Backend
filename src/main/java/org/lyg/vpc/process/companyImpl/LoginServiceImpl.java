@@ -15,15 +15,18 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public Usr findUsrByUEmail(String uEmail) {
-        return null;
+        Usr usr = loginDAO.selectUsrByUEmail(uEmail);
+        return usr;
     }
 
     @Override
     public UsrToken findUsrTokenByUId(Integer uId) {
-        return null;
+        UsrToken usrToken = loginDAO.selectUsrTokenByUId(uId);
+        return usrToken;
     }
 
     @Override
     public void updateUsrTokenByUId(Integer uId, String key, String uPassword, long uTime) {
+        loginDAO.updateUsrTokenByUId(uId, key, uPassword, uTime);
     }
 }

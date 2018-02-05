@@ -12,7 +12,6 @@ import org.lyg.vpc.view.UsrToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +27,7 @@ public class LoginProjectImpl implements LoginProject {
         Usr usr = loginService.findUsrByUEmail(uEmail);
         UsrToken usrToken = loginService.findUsrTokenByUId(usr.getUId());
         //internal code
-        String password = StringUtil.EncoderByMd5("lyg", uPassword, 8);
+        String password = TokenUtil.getMD5Password(uPassword);
         if (!password.equals(usrToken.getUPassword())) {
             return null;
         }
