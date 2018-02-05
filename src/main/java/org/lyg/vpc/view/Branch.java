@@ -14,5 +14,5 @@ public class Branch {
     private String uPSToken;
     private String uClass;
     private String uEmail;
-    private String uQQ;
+    private String uQq;
 }

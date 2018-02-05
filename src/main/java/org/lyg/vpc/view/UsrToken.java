@@ -8,5 +8,5 @@ public class UsrToken {
     private String uKey;
     private String uPassword;
     private String uToken;
-    private Integer uTime;
+    private long uTime;
 }

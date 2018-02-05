@@ -18,5 +18,5 @@ public class UsrFull {
     private String uQQ;
     private Integer uKey;
     private String uToken;
-    private Integer uTime;
+    private long uTime;
 }

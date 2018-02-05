@@ -2,10 +2,6 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
-    </settings>
-
     <!-- <settings>
          <setting name="logImpl" value="LOG4J2" />
          <setting name="cacheEnabled" value="true"/>
@@ -24,5 +20,4 @@
                      handler="org.apache.ibatis.type.SqlTimestampTypeHandler"/>
 
     </typeHandlers>
-
-</configuration>
+  </configuration>

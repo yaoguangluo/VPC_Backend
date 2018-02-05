@@ -16,15 +16,13 @@
     <context:property-placeholder/>
     <context:component-scan base-package="org.lyg.common.*"/>
     <context:component-scan base-package="org.lyg.vpc.*"/>
-    <tx:annotation-driven/>
-    <import resource="classpath*:dataSource.xml"/>
-    <bean id="dataSourceAspect" class="org.lyg.common.aspects.DataSourceAspect"/>
+    <!--aop:aspectj-autoproxy proxy-target-class="true"/-->
 
+    <import resource="classpath*:dataSource.xml"/>
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="writeDataSource"/>
     </bean>
-
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="readDataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
@@ -37,13 +35,15 @@
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
 
+    <tx:annotation-driven/>
     <tx:advice id="userTxAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="transaction*" propagation="REQUIRED" read-only="false"
                        rollback-for="java.lang.RuntimeException"/>
         </tx:attributes>
     </tx:advice>
-
+    <!--bean id="testAspect" class="org.lyg.common.aspects.TestAspect"/-->
+    <bean id="dataSourceAspect" class="org.lyg.common.aspects.DataSourceAspect"/>
     <aop:config>
         <aop:advisor order="3" pointcut-ref="delegate" advice-ref="userTxAdvice"/>
         <aop:aspect id="c" order="2" ref="dataSourceAspect">
@@ -74,4 +74,5 @@
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
         <property name="connectionFactory" ref="connectionFactory"/>
     </bean>
+
 </beans>

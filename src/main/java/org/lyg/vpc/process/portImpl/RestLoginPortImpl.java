@@ -3,6 +3,7 @@ package org.lyg.vpc.process.portImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.lyg.vpc.controller.port.RestLoginPort;
 import org.lyg.vpc.controller.project.LoginProject;
+import org.lyg.vpc.transaction.TransactionDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,11 +18,11 @@ public class RestLoginPortImpl implements RestLoginPort {
     private StringRedisTemplate redisTemplate;
 
     @Autowired
-    private LoginProject loginProject;
+    private TransactionDelegate transactionDelegate;
 
     @Override
     public Map<String, Object> login(String uEmail, String uPassword) throws Exception {
-        Map<String, Object> map = loginProject.login(uEmail, uPassword);
+        Map<String, Object> map = transactionDelegate.transactionLogin(uEmail, uPassword);
         return map;
     }
 

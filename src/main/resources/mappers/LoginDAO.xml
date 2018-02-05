@@ -19,7 +19,7 @@
         <id column="u_id" jdbcType="INTEGER" property="uId"/>
         <result column="u_key" jdbcType="INTEGER" property="uKey"/>
         <result column="u_password" jdbcType="VARCHAR" property="uPassword"/>
-        <result column="u_time" jdbcType="INTEGER" property="uTime"/>
+        <result column="u_time" jdbcType="BIGINT" property="uTime"/>
     </resultMap>
 
     <resultMap id="UsrFullMap" type="org.lyg.vpc.view.UsrFull">
@@ -35,7 +35,7 @@
         <result column="u_qq" jdbcType="VARCHAR" property="uQq"/>
         <result column="u_key" jdbcType="INTEGER" property="uKey"/>
         <result column="u_password" jdbcType="VARCHAR" property="uPassword"/>
-        <result column="u_time" jdbcType="INTEGER" property="uTime"/>
+        <result column="u_time" jdbcType="BIGINT" property="uTime"/>
     </resultMap>
 
     <select id="selectUsrByUId" parameterType="map" resultMap="UsrMap">

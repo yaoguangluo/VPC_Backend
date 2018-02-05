@@ -8,15 +8,12 @@ public class DataSourceAspect {
     public void pointCut() {
     }
 
-    ;
-
     public void before(JoinPoint point) {
         Object target = point.getTarget();
         System.out.println("target=" + target.toString());
         String m = point.getSignature().getName();
         try {
             System.out.println(m);
-
             if (m != null && m.startsWith("transaction")) {
                 System.out.println("Annotation=WriteData");
                 HandleDataSource.putDataSource("write");
@@ -31,9 +28,9 @@ public class DataSourceAspect {
     }
 
     public void after(JoinPoint point) {
-
         System.out.println("Annotation=ReadData");
         HandleDataSource.putDataSource("read");
+
     }
 
 }
