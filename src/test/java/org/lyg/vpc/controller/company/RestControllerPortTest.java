@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.lyg.mainInterface.MainApplication;
+import org.lyg.vpc.controller.port.RestControllerPort;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class RestControllerPortTest {
     private MockMvc mockMvc;
     @Autowired
-    private  RestControllerPort restControllerPort;
+    private RestControllerPort restControllerPort;
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);

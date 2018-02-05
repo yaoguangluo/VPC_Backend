@@ -5,7 +5,7 @@ import lombok.Setter;
 @Setter
 public class UsrToken {
     private Integer uId;
-    private Integer uKey;
+    private String uKey;
     private String uPassword;
     private String uToken;
     private Integer uTime;

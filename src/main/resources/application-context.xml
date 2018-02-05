@@ -14,27 +14,26 @@
          http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
     <context:annotation-config/>
     <context:property-placeholder/>
-    <context:component-scan base-package="org.lyg.common"/>
-    <context:component-scan base-package="org.lyg.common.utils"/>
+    <context:component-scan base-package="org.lyg.common.*"/>
     <context:component-scan base-package="org.lyg.vpc.*"/>
-    <!--aop:aspectj-autoproxy proxy-target-class="true"/-->
-
+    <tx:annotation-driven/>
     <import resource="classpath*:dataSource.xml"/>
+    <bean id="dataSourceAspect" class="org.lyg.common.aspects.DataSourceAspect"/>
+
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="writeDataSource"/>
     </bean>
 
-    <tx:annotation-driven/>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="readDataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
-        <property name="mapperLocations" value="classpath*:mappers/*Dao.xml"></property>
+        <property name="mapperLocations" value="classpath*:mappers/*DAO.xml"></property>
     </bean>
 
-    <bean id="selectDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+    <bean id="loginDAO" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="mapperInterface"
-                  value="org.lyg.vpc.controller.factory.workshop.task.SelectDAO"></property>
+                  value="org.lyg.vpc.controller.factory.LoginDAO"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
 
@@ -44,8 +43,7 @@
                        rollback-for="java.lang.RuntimeException"/>
         </tx:attributes>
     </tx:advice>
-    <!--bean id="testAspect" class="org.lyg.common.aspects.TestAspect"/-->
-    <bean id="dataSourceAspect" class="org.lyg.common.aspects.DataSourceAspect"/>
+
     <aop:config>
         <aop:advisor order="3" pointcut-ref="delegate" advice-ref="userTxAdvice"/>
         <aop:aspect id="c" order="2" ref="dataSourceAspect">
@@ -66,6 +64,7 @@
         <property name="database" value="6"/>
         <constructor-arg index="0" ref="jedisPoolConfig"/>
     </bean>
+
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxTotal" value="300"/>
         <property name="maxIdle" value="100"/>
@@ -75,6 +74,4 @@
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
         <property name="connectionFactory" ref="connectionFactory"/>
     </bean>
-
-
 </beans>
