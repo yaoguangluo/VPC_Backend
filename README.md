@@ -9,6 +9,7 @@
 6.可自由集成sonar测试
 7.可docker部署
 8.可jenkins发布
+9.支持gitlab 版本控制做 CICD
 
 
 作者
