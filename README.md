@@ -17,6 +17,16 @@ VPC定义： c是控制器， p是处理机，v是观察模式，这种rest碎�
 9.支持gitlab 版本控制做 CICD
 10.服务器采用嵌入式Jetty部署
 
+#注意：
+We found a potential security vulnerability in one of your dependencies.
+A dependency defined in …/static/package-lock.json has known security vulnerabilities and should be updated.
+
+Only the owner of this repository can see this message.
+Learn more about vulnerability alerts
+
+里面的jason文件有个别安全漏洞，大家可以用最新的开源包替代， 谢谢。
+
+
 
 作者
 20180727
