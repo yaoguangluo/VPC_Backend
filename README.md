@@ -15,6 +15,7 @@ VPC定义： c是控制器， p是处理机，v是观察模式，这种rest碎�
 7.可docker部署
 8.可jenkins发布
 9.支持gitlab 版本控制做 CICD
+10.服务器采用嵌入式Jetty部署
 
 
 作者
