@@ -76,7 +76,8 @@
 github 有commit记录，不用我来解释。想不该从亚米挖他，我走时候没说什么，他用他最擅长的技术，至少不会给走四方带来灾难。我没有必要管。。 ----罗瑶光
 
 另外 angular1.2是kiyor cai 介绍我EZC源码写note，的时候我自学了下，感觉不错，英特尔也是angular1。2 但是是基于nodejs平台，与我代码无关，
-说重点，kiyor cai 亲口在我在洛杉矶开comforx公司的时候，来找我，说的，蓝汛没有采用他的EZC， 别给我惹事。他要我会蓝汛，我说没8000美金月薪别来找我 ----罗瑶光
+说重点，kiyor cai 亲口在我在洛杉矶开comforx公司的时候，来找我，说的，蓝汛没有采用他的EZC， 别给我惹事。他要我回蓝汛，我说没8000美金月薪别来找我 ----罗瑶光
+
 
     <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
         <id column="id" jdbcType="INTEGER" property="id" />
