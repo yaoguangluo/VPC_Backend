@@ -131,6 +131,7 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 angular 和 springboot等，就是把laravel翻译成java eap、美国版权局一定有完整记录，走四方的如果有angular的动机必然是猫腻哥盗取了
 kiyor的，趁机栽赃我，手法不高明，因为kiyor的angular是go的最简单写法，不支持js测试。我在走四方用的是eclipse ide。而且kiyor给我的包啊，
 用的可不是微软的平台哦。里面有哈哈东西。我反正老实，我的40余著作权 没有一点kiyor的东西。不管我的事就对了。我在亚米 走四方 英特尔可没有用半句golang写工程。
+就之前写个英雄联盟装备筛选的go+rust 帮我上分用的。目前我钻四了。 反正不是王者，没什么用。
 
     <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
         <id column="id" jdbcType="INTEGER" property="id" />
