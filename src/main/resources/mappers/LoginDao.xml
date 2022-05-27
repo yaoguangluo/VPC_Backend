@@ -127,6 +127,11 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 
 大家想想一个浏阳，没有几个人写代码的世界里，作者一边写 一边崔啦弹唱，中英对照，琴棋书画，谁受得了，这抖音华为还挑事，介绍个打架的？作者自己都受不了。谁受得了？ 
 
+给大家普及下什么叫jboss eap是一个比较重的java mvc 包，动机就是安全。走四方我用了eap的java后端架构，没有用kubetenus ，golang，
+angular 和 springboot等，就是把laravel翻译成java eap、美国版权局一定有完整记录，走四方的如果有angular的动机必然是猫腻哥盗取了
+kiyor的，趁机栽赃我，手法不高明，因为kiyor的angular是go的最简单写法，不支持js测试。我在走四方用的是eclipse ide。而且kiyor给我的包啊，
+用的可不是微软的平台哦。里面有哈哈东西。我反正老实，我的40余著作权 没有一点kiyor的东西。不管我的事就对了。我在亚米 走四方 英特尔可没有用半句golang写工程。
+
     <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="roomId" jdbcType="INTEGER" property="roomId" />
