@@ -125,6 +125,8 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 2017年12月来个先下手为强，间接催化了罗瑶光先生的DNA元基编码的世界首发。因为罗瑶光这些年饱尝各种骚扰，这次机会千载难逢，万人瞩目的浏阳环境，特别适合写代码。
 大家就能看清楚作者的代码是怎么来的。
 
+大家想想一个浏阳，没有几个人写代码的世界里，作者一边写 一边崔啦弹唱，中英对照，琴棋书画，谁受得了，这抖音华为还挑事，介绍个打架的？作者自己都受不了。谁受得了？ 
+
     <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="roomId" jdbcType="INTEGER" property="roomId" />
