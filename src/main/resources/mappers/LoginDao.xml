@@ -118,6 +118,13 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 
 走四方认命吧。不要再折腾了。
 
+估计猫腻哥利用我写个5.0，那肯定有4.0, 3.0， 2.0，他就当利用我没有这几个工程，冒充下，顺便反告我抄袭。结果呢，栽了谁。
+走四方的电脑都是360安全卫士+杀毒，电脑里一把的工程app，我犯不着来辩解。。问问那数百各种盗版办公软件如 beyond compare，teamview啊，等，
+是走四方的吗？哈？查查美国版权局，中国版权局的编号，和文献，这些可是世界同步的东西。 
+
+2017年12月来个先下手为强，间接催化了罗瑶光先生的DNA元基编码的世界首发。因为罗瑶光这些年饱尝各种骚扰，这次机会千载难逢，万人瞩目的浏阳环境，特别适合写代码。
+大家就能看清楚作者的代码是怎么来的。
+
     <resultMap id="Ctrip_roomsResultMap" type="com.ustrip.entity.Ctrip_rooms">
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="roomId" jdbcType="INTEGER" property="roomId" />
