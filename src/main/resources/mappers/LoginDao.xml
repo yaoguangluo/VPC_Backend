@@ -103,7 +103,7 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 . Auto Publisher with gradle，by using Sonar lint, Sonar qube and Sonar spell.
 . Auto Code Analyzer Qube by using Sonar, Codec, CDL(CountDownLatch) deployment.
 . Auto Cognition Face-let by using Criteria Unsql, ORM. Sonar suggestion
-. Auto Complex Test mainly used Jasmine, Mocha, Karma, mokito MVC and Junit test, 
+. Auto Complex Test mainly used Jasmine, Mocha, Karma, mokito MVC and Junit spring runner test, 
 . Auto Functional SQL statement by using Hibernate native and Criteria ORM, JPA.
 . Meeting Skill
 . Auto Interval Transaction Protocol by using Jet terminal, Node on Boot.   
