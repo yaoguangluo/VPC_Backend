@@ -91,6 +91,11 @@ Ctrip的转走四方官方之前的mybatis还有几行没有删除掉。因为�
 
 4 我第一次提VPC的那一行记录，在VPC5.0 工程，不在Ctrip和 vpc backend因为不在这个工程，因为工程就十个文件不到，猫腻哥 似乎没有发现，
 这么重要的一句话。https://github.com/yaoguangluo/VPC5.0/commit/dc06dbc3750879155871d45ce9cdb8be29825a60
+
+特别是下面这句我’梦想中的‘牛津大学博士课程 我自己设计了VPC这个词汇。因为是private我的笔记，所以一直没有公开。 我在旧金山佛森，用frys买的联想电脑push的，
+电脑有360，英雄联盟，qq音乐，eclipse， jetbrain，等数十个app。走四方不要再折腾了。
+https://github.com/yaoguangluo/document/commit/390b77a854ddcba2fe38021b184d2dae5e22975f
+
 这句话链接才是第一次我提出VPC来的。猫腻哥千算万算算错了包，以为我莫名其妙2018年删了Ctrip， 走四方把fork去掉就不能还原repository了
 我就栽了，难怪那时候还疱疹。还当老师，先烂我人格，再烂我学术，我还各种报警，最后就烂我宗族，结果公安部估计看到这个 没删的 vpc5.0，
 出现了最早了VPC词汇。哈？。
